@@ -147,15 +147,15 @@ class Brainfuck(object):
 		""" removes all non-brainfuck commands. """
 		self.code = ''.join(filter(lambda x: x in '+-<>.,[]', self.code))
 
-	def __init__(self, code=None, verbose=0, step=0, file=None, logTo=None):
+	def __init__(self, code=None, verbose=0, step=0, inFile=None, logTo=None):
 		"""
 		make the class and initialize the values used.
 
 		code: string/list of code
 		verbose: uses debugger on every step, see self.debug
 		step: interval between debug outputs
-		file: file name to read code from
-		logto: file to send output to
+		inFile: file name to read code from
+		logTo: file to send output to
 
 		use:
 			x = Brainfuck(code)
@@ -173,8 +173,8 @@ class Brainfuck(object):
 		"""
 
 		self.code = code
-		if f:
-			with open(f, 'r') as b:
+		if inFile:
+			with open(inFile, 'r') as b:
 				self.code = b.read()
 		self.verbose = verbose
 		self.step = step

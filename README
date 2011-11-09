@@ -2,5 +2,10 @@ example use:
 
 
 kryptn:~/python/brainfuck$ python -i brainfuck.py
->>> r = Brainfuck(hw, verbose=2, logTo='hw.log')
+>>> hw
+'++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.'
+>>> x = Brainfuck(hw, verbose=2, logTo='hw.log')
+>>> x.compile()
 Hello World!
+
+
