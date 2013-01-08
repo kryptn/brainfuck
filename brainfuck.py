@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from time import sleep
 
 hw =  '++++++++++[>+++++++>++++++++++>+++>+<<<<-]>'
